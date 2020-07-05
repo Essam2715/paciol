@@ -1,0 +1,139 @@
+<div class="posts">
+    <!-- 
+      ################################################
+      ################################################# -->
+    <!-- ./ Write Post-->
+
+    <div class="write-post rgba-white-strong">
+        <div class="form-group mb-0">
+            <!-- Form Group  -->
+            <div class="media write-task py-2">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="45px" class="img-fluid rounded-circle z-depth-0">
+
+
+                <div class="media-body">
+                    <small class="text-muted mb-0 ">Hi Jhonson Smith !</small>
+                    <br>
+                    <span class="mt-0 text-muted">Create new news or something to do</span>
+                </div>
+                <!-- media Body -->
+                <div class="float-right media privacy">
+                    <div class="icon d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="34" fill="#60708d" viewBox="0 0 24 24">
+              <path
+                d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-5 7.723v2.277h-2v-2.277c-.595-.347-1-.984-1-1.723 0-1.104.896-2 2-2s2 .896 2 2c0 .738-.404 1.376-1 1.723zm-5-7.723v-4c0-2.206 1.794-4 4-4 2.205 0 4 1.794 4 4v4h-8z" />
+            </svg>
+                    </div>
+                    <div class="media-body">
+                        <small class="mt-0 d-block">visible for</small>
+                        <div mdbDropdown class="btn-group position-relative">
+                            <a mdbDropdownToggle class="dropdown-toggle  waves-light text-muted" mdbWavesEffect>everyone</a>
+                            <div class="dropdown-menu ">
+                                <a class="dropdown-item" href="#">private</a>
+                                <a class="dropdown-item" href="#">only me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- media -->
+            <textarea class="form-control b-0" id="exampleFormControlTextarea1" rows="4"></textarea>
+            <div class="bottom-nav d-flex align-items-center">
+                <ul class="list-unstyled navbar z-depth-0">
+                    <li><i class="fas fa-microphone pl-2"></i> </li>
+                    <li><i class="fas fa-map-marker-alt"></i> </li>
+                    <li><i class="fas fa-camera"></i> </li>
+                    <li><i class="fas fa-paste"></i> </li>
+                </ul>
+                <ul class="list-unstyled navbar z-depth-0">
+                    <li><i class="fas fa-file-alt"></i> </li>
+                    <li><i class="fas fa-clipboard-check"></i> </li>
+                    <li><i class="far fa-calendar"></i> </li>
+                </ul>
+                <div class="btn-post d-flex justify-content-end align-items-center flex-1">
+                    <a href="#" mdbWavesEffect class="text-white d-block text-center h-100 ">POST IT</a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Form Group  -->
+
+    </div>
+    <!-- ./ Write Post-->
+    <!-- 
+      ################################################
+      #################################################
+      #################################################
+      #################################################
+      #################################################
+  -->
+
+    <div class="filter-post mt-2 w-100">
+        <!-- --------------------------  Filter posts --------------------------- -->
+        <div class="row">
+            <div class="col">
+                <div class="tabs">
+                    <div class="tab">
+                        <input type="checkbox" id="chck1">
+                        <label class="tab-label" for="chck1">Your Posts</label>
+                        <div class="tab-content">
+                            <label class="text-right pr-2 " style="width: 88px;">Post Type :</label>
+                            <ul class="list-unstyled navbar d-inline-flex align-items-center z-depth-0 ">
+                                <li class="pr-3 "><i class="fas fa-file-alt active"></i> </li>
+                                <li class="pr-3"><i class="fas fa-clipboard-check"></i> </li>
+                                <li class="pr-3"><i class="far fa-calendar"></i> </li>
+                                <li class="pr-3"><i class="fas fa-envelope"></i></li>
+
+                            </ul>
+                            <br>
+                            <label class="text-right pr-2 " style="width: 88px;">status :</label>
+                            <ul class="list-unstyled navbar d-inline-flex align-items-center z-depth-0">
+                                <li class="pr-3 "><i class="far fa-check-circle active"></i></li>
+
+                                <li class="pr-3 ">
+                                    <i class="far fa-check-circle"></i>
+                                    <!-- <i class="fas fa-slash"></i> -->
+                                </li>
+                            </ul><br>
+                            <label class="text-right pr-2 " style="width: 88px;">time :</label>
+                            <ul class="list-unstyled navbar d-inline-flex align-items-center z-depth-0">
+                                <li class="pr-3 "><i class="fas fa-clock active"></i></li>
+                                <li class="pr-3"><i class="far fa-calendar-minus"></i></li>
+                            </ul>
+                            <div class="pr-3 w-100 d-flex">
+                                <label class="text-right pr-0 mb-0 d-inline-flex align-items-center"> contains:</label>
+                                <input type="text" id="contain-search" class=" rounded w-100" placeholder="Search Here">
+                                <mdb-icon fas icon="search" class="search-filter"></mdb-icon>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Desc -->
+
+    </div>
+    <!-- -------------------------- End Filter posts --------------------------- -->
+
+    <app-basic-post> </app-basic-post>
+    <br>
+    <app-task-post-not-done></app-task-post-not-done>
+    <br>
+    <app-task-post-done></app-task-post-done><br>
+    <app-task-list-not-done></app-task-list-not-done><br>
+    <app-task-list-in-progress></app-task-list-in-progress><br>
+    <app-task-list-expired></app-task-list-expired><br>
+    <app-task-list-done></app-task-list-done><br>
+    <app-tasklist-date-not-done></app-tasklist-date-not-done><br>
+    <app-tasklist-date-in-progress></app-tasklist-date-in-progress><br>
+    <app-tasklist-date-expired></app-tasklist-date-expired><br>
+    <app-tasklist-date-done></app-tasklist-date-done><br>
+    <app-mail-post></app-mail-post>
+
+
+    <!-- -------------------------------- Posts Start -------------------------------- -->
+
+</div>

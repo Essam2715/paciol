@@ -1,0 +1,116 @@
+.mailing-list {
+    .item {
+        border-left: 3px solid #651fff;
+        border-bottom: 1px solid #a1a1a1;
+        overflow: hidden;
+        border-top: 0;
+        border-right: 0;
+        font-size: 14px;
+        font-weight: 500;
+        &:focus {
+            border-top: 0;
+            border-right: 0;
+            border-left: 3px solid #651fff;
+            border-bottom: 1px solid #a1a1a1;
+        }
+        .price {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-bottom: 56px solid;
+            border-right: 144px solid transparent;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    ul {
+        overflow-y: hidden;
+        height: 100vh;
+        li {
+            background-color: #3e4242;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            cursor: pointer;
+            border-bottom: 2px solid #fff;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -ms-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                background-color: #492ba7;
+            }
+        }
+    }
+    .left-nav {
+        left: 0;
+        top: 8px;
+        position: fixed;
+        height: 100vh;
+        scrollbar-color: red;
+    }
+}
+
+.mft {
+    margin-left: -84px;
+}
+
+.item-head.col-md-3 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+
+/* ------------------------------- Calculator ------------------------------ */
+
+@media screen and (max-width: 767px) {
+    .left-nav {
+        position: relative !important;
+        ul {
+            height: auto;
+            li {
+                width: 50%;
+                display: inline-block;
+                height: 70px;
+                border-right: 1px solid #fff;
+            }
+        }
+    }
+    .mft {
+        margin-left: 0px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #492ba7;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */

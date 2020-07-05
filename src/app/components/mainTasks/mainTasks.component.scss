@@ -1,0 +1,238 @@
+.posts {
+    .write-post {
+        border: 1px solid #1e8ab7;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        .write-task {
+            padding: 15px;
+            .dropdown {
+                top: -15px;
+                i {
+                    left: 9px;
+                    top: 5px;
+                }
+            }
+            .media-body {
+                padding-left: 8px;
+                span {
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+            .iconLock {
+                left: -22px;
+                top: 9px;
+            }
+            .btn-group {
+                top: -9px;
+            }
+        }
+        textarea {
+            border: 0;
+            resize: none;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .bottom-nav {
+            background-color: #e4eff3;
+            ul.navbar {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                height: 40px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex: 1;
+                border-right: 1px solid #cdcdcd;
+                li {
+                    padding: 0 10px;
+                }
+                i {
+                    font-size: 20px;
+                    padding-right: 15px;
+                    color: #60708d;
+                    cursor: pointer;
+                    height: 20px;
+                    width: 20px;
+                    &:hover {
+                        color: #1e8ab7;
+                        transition: all 0.5s ease-in;
+                        -webkit-transition: all 0.5s ease-in;
+                        -moz-transition: all 0.5s ease-in;
+                        -ms-transition: all 0.5s ease-in;
+                        -o-transition: all 0.5s ease-in;
+                    }
+                }
+            }
+            .btn-post {
+                a {
+                    background-color: #2792bf;
+                    font-weight: 800;
+                    width: 50%;
+                    padding: 11px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
+    }
+    // Show filters
+    .filter-post {
+        input#chck1 {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+        #contain-search {
+            border: 1px solid #cdcdcd;
+            height: 35px;
+            &:focus {
+                border: 1px solid #cdcdcd;
+            }
+        }
+        .navbar {
+            padding: 0;
+        } // Layout
+        input {
+            &:focus {
+                outline-color: gray;
+            }
+        }
+        .row {
+            display: flex;
+            .col {
+                flex: 1;
+            }
+        }
+        /* Accordion styles */
+        .tabs {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        label.text-right {
+            width: 88px;
+            font-weight: 400;
+            color: grey;
+        }
+        .tab {
+            width: 100%;
+            overflow: hidden;
+            &-label {
+                display: flex;
+                justify-content: space-between;
+                padding: 1em;
+                background: #fff;
+                cursor: pointer;
+                /* Icon */
+                &::after {
+                    content: "Show Filter \290B";
+                    text-align: center;
+                    transition: all 0.35s;
+                    color: #1e8ab7;
+                }
+            }
+            &-content {
+                max-height: 0;
+                padding: 0 1em;
+                color: #444;
+                background: white;
+                transition: all 0.35s;
+            }
+            &-close {
+                display: flex;
+                justify-content: flex-end;
+                padding: 1em;
+                font-size: 0.75em;
+                cursor: pointer;
+            }
+        }
+        ul {
+            display: block;
+            li {
+                display: inline;
+                i {
+                    font-size: 20px;
+                    padding-right: 7px;
+                    padding-top: 2px;
+                    color: #60708d;
+                    transition: all 0.4s ease-in;
+                    cursor: pointer;
+                    -webkit-transition: all 0.4s ease-in;
+                    -moz-transition: all 0.4s ease-in;
+                    -ms-transition: all 0.4s ease-in;
+                    -o-transition: all 0.4s ease-in;
+                    &:hover {
+                        color: #2792bf;
+                    }
+                }
+            }
+            .active {
+                color: #2792bf !important;
+            }
+        }
+        // :checked
+        input:checked {
+            +.tab-label {
+                &::after {
+                    content: "Show Filter \290A ";
+                }
+            }
+            ~.tab-content {
+                max-height: 100vh;
+                padding: 1em;
+            }
+        }
+    }
+}
+
+.search-filter {
+    position: relative;
+    left: -25px;
+    top: 9px;
+}
+
+.privacy {
+    position: absolute;
+    right: 29px;
+    top: 20px;
+}
+
+
+/* ------------------------------- Responsive ------------------------------- */
+
+@media screen and (max-width: 767px) {
+    .write-comment {
+        input {
+            width: 82%;
+        }
+        i {
+            right: 7%;
+            position: absolute;
+        }
+    }
+    .bottom-nav {
+        .btn-post {
+            a {
+                width: 100% !important;
+            }
+        }
+        ul.navbar {
+            li {
+                padding: 0 3px !important;
+            }
+        }
+    }
+    .search-filter {
+        position: absolute;
+        left: 90%;
+        right: 10px !important;
+        top: 9px;
+    }
+}
+
+
+/* ------------------------ $$$$$$$$$$$$$$$$$$$$$$$$$ ----------------------- */

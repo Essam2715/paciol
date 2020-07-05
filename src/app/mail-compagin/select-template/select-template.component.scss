@@ -1,0 +1,45 @@
+.btn {
+    padding: 1px 0.75rem !important;
+    font-size: 12px;
+    background-color: #f2f2f2;
+    border: 1px solid grey;
+    margin: 5px;
+}
+
+img {
+    padding: 10px 10px 0 10px !important;
+    background-color: #f6f6f6;
+}
+
+a {
+    color: #1e8ab7;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #1e8ab7 !important;
+    color: #fff;
+}
+
+input {
+    padding-left: 10px !important;
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.landing-campaign {
+    form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .landing-campaign {
+        form {
+            width: 100%;
+        }
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+}

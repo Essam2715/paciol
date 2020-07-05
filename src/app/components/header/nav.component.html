@@ -1,0 +1,69 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg  info-color-dark
+w-100 fixed-top text-white " [containerInside]="false">
+
+    <mdb-navbar-brand>
+        <a class="navbar-brand" href="#" class="">
+            <img src="../assets/img/logo.png" class="img-fluid" width="150px" alt="Responsive image">
+        </a>
+    </mdb-navbar-brand>
+
+
+    <!-- Collapsible content -->
+    <links class="d-flex">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown " dropdown>
+                <span class="">select company</span>
+
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link pt-0 dropdown-toggle waves-light" mdbWavesEffect>The
+          Creative Company<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+                </div>
+            </li>
+
+        </ul>
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto ">
+
+            <form class="form-inline d-sm-none md-form form-sm-none active-cyan-2 rounded-pill border transparent">
+                <input class=" form-control-sm rounded-pill  border-bottom-0 " type="text" placeholder="Search" aria-label="Search" mdbInput>
+                <mdb-icon fas icon="search" class="px-1" aria-hidden="true"></mdb-icon>
+            </form>
+
+        </ul>
+        <!-- Links -->
+
+        <ul class="navbar-nav ml-auto nav-flex-icons align-items-center">
+            <li class="nav-item">
+                <a class="nav-link position-relative"><span class="position-absolute icon-mark">1</span>
+          <mdb-icon far icon="comment-alt" style="font-size: 16px;"></mdb-icon>
+        </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link position-relative"><span class="position-absolute icon-mark">1</span>
+          <mdb-icon far icon="bell" style="font-size: 16px;"></mdb-icon>
+        </a>
+            </li>
+            <li class="nav-item avatar dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link zoom dropdown-toggle waves-light" mdbWavesEffect>
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="40px" class="img-fluid rounded-circle z-depth-0"></a>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+                </div>
+            </li>
+        </ul>
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->

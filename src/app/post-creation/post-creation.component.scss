@@ -1,0 +1,103 @@
+/* ----------------------- public styles in all Posts ----------------------- */
+
+.border-theme {
+    border: 2px solid #1e8ab7;
+}
+
+.privacy {
+    position: absolute;
+    right: 29px;
+    top: 20px;
+}
+
+textarea {
+    border: 0;
+    resize: none;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.bottom-nav {
+    background-color: #e4eff3;
+    .btn-post {
+        a {
+            background-color: #2792bf;
+            font-weight: 800;
+            width: 50%;
+            padding: 11px;
+        }
+    }
+}
+
+ul.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    li {
+        padding: 0 10px;
+    }
+    i {
+        font-size: 20px;
+        padding-right: 15px;
+        color: #60708d;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        &:hover {
+            color: #1e8ab7;
+            transition: all 0.5s ease-in;
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -ms-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+        }
+    }
+}
+
+.hashtag-friend {
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    max-height: 400px;
+    overflow-y: auto;
+    &::before {
+        height: 15px;
+        width: 15px;
+        content: "";
+        position: absolute;
+        width: 50;
+        left: -8px;
+        top: 6px;
+        transform: rotate(45deg);
+        border-bottom: 1px solid #e4eff3;
+        border-left: 1px solid #e4eff3;
+        background-color: white;
+        display: block;
+    }
+}
+
+.persons {
+    cursor: pointer;
+    border-bottom: 1px solid #e4eff3;
+    padding: 10px 0;
+    &:hover {
+        background-color: #e4eff3;
+    }
+}
+
+
+/* ----------------------- public styles in all Posts ----------------------- */
+
+.active i {
+    color: #2792bf !important;
+}
+
+.italic {
+    font-style: italic;
+}

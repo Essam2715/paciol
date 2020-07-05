@@ -1,0 +1,196 @@
+.task-res {
+    padding-left: 0;
+    font-size: 24px;
+    .align-items-center {
+        background-color: #fafbfb;
+        padding: 8px 5px;
+    }
+    .wid-style {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        display: flex;
+        align-items: center;
+        mdb-icon {
+            margin: auto;
+        }
+    }
+    .firstIcon {
+        color: #1b6b8d;
+        font-size: 20px;
+        background-color: #daebf2;
+    }
+    .sectIcon {
+        background-color: #f8dfe5;
+        font-size: 27px;
+        color: #ec3e67;
+    }
+    .thIcon {
+        background-color: #deefec;
+        font-size: 27px;
+        color: #3dad93;
+    }
+    .foIcon {
+        color: #e77e23;
+        font-size: 27px;
+        background-color: #f7e8db;
+    }
+}
+
+.float-right {
+    h4 {
+        top: -4px;
+        position: relative;
+    }
+}
+
+.posts-related {
+    background-color: #f5f6f7;
+    h6 {
+        display: flex;
+        align-items: center;
+        mdb-icon {
+            background-color: red;
+            color: #fff;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 4px;
+            margin-left: 6px;
+        }
+    }
+    .recent-activities {
+        position: relative;
+        border: 1px solid #c4c2c2;
+        border-top: none;
+        // padding: 12px;
+        padding: 10px 23px;
+        padding-top: 15px;
+        .text-right {
+            position: relative;
+            top: -5px;
+        }
+        &.expires-post {
+            border-top: 4px solid #ff8500;
+            h4 {
+                font-weight: 500;
+                font-size: 16px;
+                color: #ff8500;
+            }
+        }
+        &.create-post {
+            border-top: 4px solid #2792bf;
+            h4 {
+                font-weight: 500;
+                font-size: 16px;
+                color: #2792bf;
+            }
+        }
+        &.complete-post {
+            border-top: 4px solid #01b075;
+            h4 {
+                font-weight: 500;
+                font-size: 16px;
+                color: #01b075;
+            }
+        }
+        &.expired-post {
+            border-top: 4px solid #f53237;
+            h4 {
+                font-weight: 500;
+                font-size: 16px;
+                color: #f53237;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 55px;
+            width: 40px;
+            display: block;
+            right: 20px;
+            top: -2px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        &.expires-post::after {
+            background-color: #ff8500;
+        }
+        &.create-post::after {
+            background-color: #2792bf;
+        }
+        &.complete-post::after {
+            background-color: #01b075;
+        }
+        &.expired-post::after {
+            background-color: #f53237;
+        }
+    }
+    .right-icon {
+        position: absolute;
+        top: 5px;
+        right: 4px;
+        z-index: 5;
+    }
+}
+
+h5 {
+    padding: 0px 0 0 9px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(90, 88, 88);
+}
+
+.doughnut-bar {
+    margin-top: 10px;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.doughnut {
+    width: 100% !important;
+    background-color: #fafbfb;
+    h5 {
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.status-color {
+    span {
+        font-size: 12px;
+        mdb-icon {
+            color: #1e8ab7;
+            font-size: 10px;
+        }
+    }
+    span:first-child {
+        mdb-icon {
+            color: #e77e23;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .customers {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    .recent-activities {
+        padding: 10px 10px !important;
+        &::after {
+            display: block;
+            right: 9px !important;
+            top: -2px;
+        }
+        .col-md-6 {
+            padding-right: 5px !important;
+            padding-left: 5px !important;
+        }
+    }
+}

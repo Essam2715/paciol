@@ -1,0 +1,99 @@
+<nav></nav>
+<!--
+    _________________________________________
+    _________________________________________
+    ______________________ -->
+<div class="container">
+    <div class="row pr-md-3 pr-sm-0 pl-md-3 pl-sm-0 mt-5">
+        <div class="rounded col-md-3 mt-md-4 mt-sm-0">
+            <side-nav></side-nav>
+        </div>
+
+        <section class="mt-4 col-md-9 col-sm-12 pr-md-3 pr-sm-1 Subscription rounded">
+            <a href="#" class="go-back">
+                <mdb-icon fas icon="chevron-left"></mdb-icon>
+                All Customer
+            </a>
+            <h4>Subscription Plans</h4>
+            <hr />
+            <div class="plans p-md-3 p-sm-1 white">
+                <table mdbTable borderless="true">
+                    <thead class="text-center">
+                        <tr class="d-flex justify-content-between align-content-center">
+                            <td class="text-left ">
+                                <img src="../../assets/img/icon/cloud.png" alt="" srcset="">
+                                <h3>
+                                    Upgrade your features
+                                </h3>
+                            </td>
+                            <td>
+                                Additional <br> functionality
+                            </td>
+                            <td>
+                                limitations
+
+                            </td>
+                            <td>
+                                Extend
+
+                            </td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr mdbTableCol *ngFor="let el of elements" class="{{el.bg}} d-flex justify-content-between align-content-center">
+                            <td scope="row">{{el.select}}</td>
+                            <td class="text-center {{el.add}}">
+                                <mdb-icon fas icon="check-circle"></mdb-icon>
+                            </td>
+                            <td class="text-center">{{el.limit}}</td>
+                            <td class="text-center">
+                                <span class=" {{el.extend}}" (click)="basicModal.show()">
+                  <mdb-icon fas icon="cart-plus"></mdb-icon>
+                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- --------------------------- Table in Footer --------------------------- -->
+        </section>
+    </div>
+</div>
+
+
+<div mdbModal #basicModal="mdbModal" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+                <h4 class="modal-title w-100" id="myModalLabel">Select the package</h4>
+            </div>
+            <div class="modal-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis ipsum suspendisse ultrices gravida.
+                <table mdbTable responsive="true">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let head of headPackage" scope="col">{{head}} </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr mdbTableCol *ngFor="let el of selectPackage">
+                            <th scope="row">{{el.functionality}}</th>
+                            <td>{{el.package}}</td>
+                            <td>{{el.deadline}}</td>
+                            <td>€ {{el.amount}}</td>
+                            <td class="show">
+                                <mdb-icon fas icon="cart-plus"></mdb-icon>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

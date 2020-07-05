@@ -1,0 +1,295 @@
+.post {
+    border: 1px solid #b9b9b9;
+    border-top: 5px solid;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    padding-top: 15px !important;
+    .status {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 55px;
+            width: 40px;
+            right: 0;
+            top: -19px;
+            display: block;
+            border-radius: 5px;
+        }
+        div {
+            right: 55px;
+            position: absolute;
+            top: -3px;
+        }
+        img {
+            position: absolute;
+            right: 6px;
+            min-height: 25px;
+            min-width: 25px;
+        }
+    }
+    .comments-friends {
+        .media {
+            .media-body {
+                background-color: #eeeeee;
+            }
+        }
+    }
+    .task-action {
+        .like {
+            font-size: 18px;
+            font-weight: 800;
+            background: -webkit-linear-gradient(left, #1798cf, #1bd3c3);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .write-comment {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        form {
+            position: relative;
+            width: 100%;
+            input {
+                width: 100%;
+                height: 43px;
+                border-radius: 25px;
+            }
+            mdb-icon {
+                position: absolute;
+                right: 15px;
+            }
+        }
+    }
+}
+
+.task-list {
+    position: relative;
+    mdb-icon {
+        color: #747d7f;
+        font-size: 22px;
+        // position: absolute;
+        left: 0;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    input {
+        opacity: 0;
+        z-index: 5;
+        right: -17px;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+.basic-post {
+    border-top-color: #7d8080;
+}
+
+.post.tasks-list-not-done {
+    border-top-color: #1798cf;
+    .status {
+        &::before {
+            background-color: #1798cf !important;
+        }
+    }
+    .not-done {
+        input:checked~ {
+            span {
+                text-decoration: line-through;
+                color: #747d7f;
+            }
+            mdb-icon {
+                color: #1798cf;
+            }
+        }
+    }
+    .stepper-horizontal li {
+        .circle {
+            background-color: #d2e8f1;
+        }
+    }
+    .active .circle {
+        background-color: #1798cf !important;
+    }
+    .stepper-horizontal li:not(:last-child):after {
+        background-color: #d2e8f1;
+    }
+    .stepper-horizontal li:not(:first-child):before {
+        background-color: #d2e8f1;
+    }
+}
+
+.post.tasks-list-done {
+    border-top-color: #01b075;
+    .status {
+        &::before {
+            background-color: #01b075;
+        }
+        p {
+            color: #01b075;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    .btn-progress {
+        background-color: #01b075;
+        color: #fff;
+    }
+    .progress-bar {
+        background-color: #01b075;
+    }
+    .task-done {
+        input:checked~ {
+            span {
+                text-decoration: line-through;
+                color: #747d7f;
+            }
+            mdb-icon {
+                color: #01b075;
+            }
+        }
+    }
+    .stepper-horizontal li {
+        .circle {
+            background-color: #8cf0ce;
+        }
+    }
+    .active .circle {
+        background-color: #01b075 !important;
+    }
+    .stepper-horizontal li:not(:last-child):after {
+        background-color: #8cf0ce;
+    }
+    .stepper-horizontal li:not(:first-child):before {
+        background-color: #8cf0ce;
+    }
+}
+
+.post.tasks-list-in-progress {
+    border-top-color: #ff8500;
+    .status {
+        &::before {
+            background-color: #ff8500;
+        }
+        p {
+            color: #ff8500;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    .btn-progress {
+        background-color: #ff8500;
+        color: #fff;
+    }
+    .progress-bar {
+        background-color: #ff8500;
+    }
+    .in-progress {
+        input:checked~ {
+            span {
+                text-decoration: line-through;
+                color: #747d7f;
+            }
+            mdb-icon {
+                color: #ff8500;
+            }
+        }
+    }
+    .stepper-horizontal li {
+        .circle {
+            background-color: #ffdab2;
+        }
+    }
+    .active .circle {
+        background-color: #ff8500 !important;
+    }
+    .stepper-horizontal li:not(:last-child):after {
+        background-color: #ffdab2;
+    }
+    .stepper-horizontal li:not(:first-child):before {
+        background-color: #ffdab2;
+    }
+}
+
+.post.tasks-list-expier {
+    border-top-color: #f53237;
+    .status {
+        &::before {
+            background-color: #f53237;
+        }
+        p {
+            color: #f53237;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    .btn-progress {
+        background-color: #f53237;
+        color: #fff;
+    }
+    .progress-bar {
+        background-color: #f53237;
+    }
+    .in-expire {
+        input:checked~ {
+            span {
+                text-decoration: line-through;
+                color: #747d7f;
+            }
+            mdb-icon {
+                color: #f53237;
+            }
+        }
+    }
+    .stepper-horizontal li {
+        .circle {
+            background-color: #fbadaf;
+        }
+    }
+    .active .circle {
+        background-color: #f53237 !important;
+    }
+    .stepper-horizontal li:not(:last-child):after {
+        background-color: #fbadaf;
+    }
+    .stepper-horizontal li:not(:first-child):before {
+        background-color: #fbadaf;
+    }
+}
+
+.stepper-horizontal li:not(:last-child):after {
+    content: "";
+    position: relative;
+    flex: 1;
+    height: 8px;
+    top: -14px;
+    left: 0px;
+}
+
+.stepper-horizontal li:not(:first-child):before {
+    content: "";
+    position: relative;
+    flex: 1;
+    height: 8px;
+    top: -14px;
+    left: 0px;
+}
+
+@media (max-width: 47.9375rem) {
+    .stepper-horizontal {
+        flex-direction: row;
+    }
+    .stepper-horizontal li {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    .stepper-horizontal li:not(:first-child)::before {
+        top: 0;
+    }
+    .stepper-horizontal li:not(:last-child):after {
+        top: 0;
+    }
+}

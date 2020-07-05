@@ -1,0 +1,28 @@
+h5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(90, 88, 88);
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #262b2c;
+}
+
+table.table td,
+table.table th {
+    /* padding: 1.1rem 16px 1rem; */
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.table-responsive {
+    display: inline-table;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        display: block;
+    }
+}

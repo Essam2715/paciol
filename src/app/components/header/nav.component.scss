@@ -1,0 +1,104 @@
+/* --------------------------------- topNav --------------------------------- */
+
+links {
+    margin-left: 80px;
+    width: 80%;
+    margin-right: 0;
+    //  display: flex;
+    //  flex-direction: row;
+    height: 40px;
+    //  align-items: center;
+    ul {
+        font-size: 13px;
+        form {
+            input {
+                width: 400px;
+                background-color: rgba(86, 61, 124, 0.15);
+                height: 25px;
+            }
+        }
+        .icon-mark {
+            right: 14px;
+            top: 5px;
+            border: 3px solid orange;
+            padding: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            color: transparent;
+        }
+    }
+}
+
+mdb-navbar-brand {
+    width: 19%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-collapse#navbarCollapse {
+        position: fixed !important;
+        display: flex !important;
+        height: 0 !important;
+    }
+    mdb-navbar-brand {
+        opacity: 0;
+        visibility: hidden;
+    }
+    // .ng-star-inserted {
+    //     display: none !important;
+    // }
+    links {
+        flex-flow: row;
+        justify-content: space-between;
+        width: 100% !important;
+        margin-left: 8px;
+        position: fixed;
+        top: 15px;
+        ul {
+            display: flex;
+            margin-right: 0 !important;
+            input {
+                width: 100% !important;
+                color: #fff;
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+            form {
+                display: none;
+            }
+            mdb-icon {
+                position: absolute;
+                right: 0;
+            }
+            .icon-mark {
+                right: 4px;
+                top: 8px;
+            }
+        }
+        .nav-flex-icons {
+            margin-left: 0 !important;
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+        }
+    }
+    .nav-item.dropdown {
+        color: #fff;
+    }
+}
+
+form {
+    border-radius: 25px;
+}
+
+input {
+    border-radius: 25px;
+}
+
+// #######################################
+// #######################################
+// #######################################
+// #######################################

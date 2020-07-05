@@ -1,0 +1,21 @@
+.show-temp {
+    background-color: #dfe3e5;
+}
+
+a {
+    color: #1e8ab7;
+}
+
+@media screen and (max-width: 767px) {
+    mdb-card-body {
+        grid-template-columns: none !important;
+        grid-template-rows: 1fr !important;
+    }
+    .d-flex {
+        flex-direction: column !important;
+        align-items: baseline;
+    }
+    img {
+        width: 100%;
+    }
+}

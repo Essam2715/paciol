@@ -1,0 +1,133 @@
+<nav></nav>
+<div class="position-fixed cart-buy text-right">
+    <mdb-icon fas icon="shopping-cart" (click)="test.toggle()"></mdb-icon>
+    <div class="" mdbCollapse #test="bs-collapse">
+        <div class="notify white rounded border">
+            <h4 class=" font-weight-bold text-left px-3 pt-2 pb-1"> My Cart</h4>
+            <ul class=" list-unstyled px-3 pb-2 pt-0">
+                <hr>
+                <li class="p-2">
+                    <img alt="Generic placeholder image" width="30px" class="align-self-start mr-3" src="../../assets/img/checkout/dropbox.png">
+                    <a href="#!" class="mr-2">pack of 100 </a> € 129.99
+                    <button type="button" class="close ml-3" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                </li>
+                <hr>
+                <li class="p-2">
+                    <img alt="Generic placeholder image" width="30px" class="align-self-start mr-3" src="../../assets/img/checkout/dropbox.png">
+                    <a href="#!" class="mr-2">pack of 500 </a> € 229.99
+                    <button type="button" class="close ml-3" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                </li>
+                <hr>
+                <li class="p-2">
+                    <img alt="Generic placeholder image" width="30px" class="align-self-start mr-3" src="../../assets/img/checkout/dropbox.png">
+                    <a href="#!" class="mr-2">pack of 100 </a> € 429.99
+                    <button type="button" class="close ml-3" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                </li>
+                <hr>
+                <button class="btn btn-primary w-100 p-3"> Proceed To Checkout</button>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!--
+    _________________________________________
+    _________________________________________
+    ______________________ -->
+<div class="container">
+    <div class="row pr-md-3 pr-sm-0 pl-md-3 pl-sm-0 mt-5">
+        <div class="rounded col-md-3 mt-md-4 mt-sm-0">
+            <side-nav></side-nav>
+        </div>
+
+        <section class="mt-4 col-md-9 col-sm-12 pr-md-3 pr-sm-1 rounded">
+            <a href="#" class="go-back">
+                <mdb-icon fas icon="chevron-left"></mdb-icon>
+                All Customer
+            </a>
+            <h4>Subscription Plans</h4>
+            <hr />
+            <div class="plans p-md-3 p-sm-1 white">
+                <table mdbTable borderless="true" responsive="true" class="white">
+                    <thead class="text-center">
+                        <tr>
+                            <th class="text-left">
+                                <img src="../../assets/img/icon/cloud.png" alt="" srcset="">
+                                <h2>
+                                    Please Select <br> Your Plane
+                                </h2>
+                            </th>
+                            <td>
+                                <p class="plane-name py-3">Free</p>
+                                <span class="my-plan">My Plan</span>
+                                <div class=" font-weight-bold text-white free">
+                                    <h4 class="d-inline-block font-weight-bold">€225</h4>/Month
+                                </div>
+                                <div class="btn btn-outline-primary">ADD TO CART</div>
+                            </td>
+                            <td>
+                                <P class="plane-name py-3">Basic</P>
+                                <div class=" font-weight-bold ">
+                                    <h4 class="d-inline-block font-weight-bold">€225</h4>/Month
+                                </div>
+                                <div class="btn btn-outline-primary">ADD TO CART</div>
+                            </td>
+                            <td>
+                                <P class="plane-name py-3">Silver</P>
+                                <div class=" font-weight-bold ">
+                                    <h4 class="d-inline-block font-weight-bold">€225</h4>/Month
+                                </div>
+                                <div class="btn btn-outline-primary">ADD TO CART</div>
+                            </td>
+                            <td>
+                                <P class="plane-name py-3">Gold</P>
+                                <div class=" font-weight-bold ">
+                                    <h4 class="d-inline-block font-weight-bold">€225</h4>/Month
+                                </div>
+                                <div class="btn btn-outline-primary">ADD TO CART</div>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr mdbTableCol *ngFor="let el of elements" class="{{el.bg}}">
+                            <th scope="row" class="p-2">{{el.select}}</th>
+                            <th class="text-center p-2 ">
+                                {{el.free}}
+                                <span class="text-danger {{el.free}} {{el.xicon}}">
+                  <mdb-icon fas icon="times"></mdb-icon>
+                </span>
+                            </th>
+                            <th class="text-center p-2">
+                                {{el.basic}}
+                                <span class="text-danger {{el.free}} {{el.xicon}}">
+                  <mdb-icon fas icon="times"></mdb-icon>
+                </span>
+                            </th>
+                            <th class="text-center p-2">
+                                {{el.silver}}
+                                <span class="text-danger {{el.xicon}}">
+                  <mdb-icon fas icon="times"></mdb-icon>
+                </span>
+                            </th>
+
+                            <th class="text-center p-2 font-weight-bolder">
+                                {{el.gold}}
+                                <span class="{{el.icon}} yes">
+                  <mdb-icon fas icon="check-circle"></mdb-icon>
+                </span>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- --------------------------- Table in Footer --------------------------- -->
+        </section>
+    </div>
+</div>

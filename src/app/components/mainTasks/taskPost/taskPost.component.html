@@ -1,0 +1,93 @@
+<!-- -------------------------------- Posts Start -------------------------------- -->
+<section *ngFor='let color of colors '>
+    <div class="tasks-post align-items-center mt-4 {{color.class}}">
+
+        <div class="media ">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="40px" class="img-fluid rounded-circle z-depth-0">
+
+            <div class="media-body pl-2">
+                <h5 class=" mb-0 ">Kistna <small class="text-muted"> has created a task</small> </h5>
+                <small class="mt-0 text-muted ">45 Min</small>
+
+            </div>
+            <div class="media-body text-muted text-right pr-5">
+                <div class="statu position-absolute">
+                    <span>Statues</span>
+                    <h4>{{color.icon}}</h4>
+                </div>
+                <img src="../../assets/img/custmer/{{color.icon}}.png" class='right-icon' alt="" srcset="">
+            </div>
+            <!-- media Body -->
+        </div>
+        <!-- ./ media  -->
+
+        <div class="task-body d-block">
+            <div class=" mb-3">
+                <a href="# " class="tag-person ">@Patrica</a> {{color.post}}
+            </div>
+            <ul class="list-unstyled task-toDo {{color.taskToDo}} pt-3 pl-2">
+                <li>Lorem ipsum dolor sit amet consectetur .</li>
+                <li>Voluptates optio vel accusamus facilis earum.</li>
+                <li>Eligendi possimus , pariatur deleniti ad repellat?</li>
+                <li>Provident dicta temporibus enim sunt blanditiis!</li>
+                <li>Quis quasi maxime minima rem cum?</li>
+            </ul>
+
+            <div class="add-or-not w-50 {{color.show}} mt-2">
+
+                <p>50% of Task is Done</p>
+                <div class="progress  ">
+
+                    <div class="progress-bar red" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="timline ">
+                    <hr>
+                    <ul class="d-flex list-unstyled justify-content-between">
+                        <li>Day 1</li>
+                        <li>Day 2</li>
+                        <li>Day 3</li>
+                        <li>Day 4</li>
+                        <li>Day 5</li>
+                        <li>Day 6</li>
+                        <li>Day 7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn float-right " style=" {{color.mt}}">
+                <i class="fas fa-check-circle mr-2"></i> Done
+            </div>
+
+
+        </div>
+        <div class="task-action ">
+            <a href="# ">OOOOOOKAY</a>
+            <span class="reaction-count ">+ 26</span>
+            <div class="comments float-right "><i class="fas fa-comment-alt pr-3 "></i>2 Comments</div>
+        </div>
+        <!--   task-action likes and Comments count -->
+        <div class="comments-friends ">
+            <div class="media p-3 ">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="45px" class="img-fluid rounded-circle pr-2">
+
+                <div class="media-body ">
+                    <p class="mt-0 mb-0"><a href="# " class="tag-person ">Patrica Andrew </a><small class="text-muted ">30min
+              ago</small></p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit seden do eiusmod tempor incididunt dolore magna aliqua.
+                </div>
+            </div>
+        </div>
+        <!-- Frindes Comment -->
+        <div class="write-comment ">
+            <form class="form-inline ">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="45px" class="img-fluid rounded-circle pr-2">
+
+                <input class="form-control form-control-sm  comment-write" type="text" placeholder="Write a Comment" aria-label="Search" mdbInput>
+                <mdb-icon fas icon="plus" aria-hidden="true"></mdb-icon>
+            </form>
+
+        </div>
+        <!-- write-comment -->
+
+    </div>
+</section>
+<!-- End Task -->

@@ -1,0 +1,78 @@
+.Subscription thead td {
+    background-color: #e9f4f8;
+    font-weight: 600;
+    font-size: 16px;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+    &:first-child {
+        background-color: #fff;
+        display: block;
+        flex-basis: 40%;
+    }
+}
+
+.yes {
+    color: #2c9980;
+}
+
+.no {
+    color: #b2b2b2;
+}
+
+.show {
+    color: #2792bf;
+    cursor: pointer;
+    mdb-icon {
+        font-size: 20px;
+    }
+}
+
+.Subscription td {
+    padding: 3px 0 15px 8px !important;
+    border-right: 2px solid #eceeef;
+    font-weight: 400;
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+    &:first-child {
+        display: block;
+        flex-basis: 40%;
+    }
+}
+
+.Subscription table.table td,
+.Subscription table.table th {
+    width: 100%;
+}
+
+.Subscription .bg {
+    background-color: #eceeef;
+    color: #2792bf;
+    align-items: center;
+    padding: 8px 0 0px 0 !important;
+}
+
+.modal-header {
+    background-color: #2792bf;
+    color: #fff;
+}
+
+.modal-body {
+    color: #000;
+    font-weight: 400;
+}
+
+.table-responsive {
+    display: inline-table;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        display: block;
+    }
+}

@@ -1,0 +1,226 @@
+<nav></nav>
+<!--
+    _________________________________________
+    _________________________________________
+    ______________________ -->
+<div class="container">
+    <div class="row pr-md-3 pr-sm-0 pl-md-3 pl-sm-0 mt-5 ">
+        <div class="rounded col-md-3 mt-4">
+            <side-nav></side-nav>
+        </div>
+        <div class="col-md-9 mt-4 white p-md-4 p-sm-0">
+            <div class="d-flex  justify-content-between align-items-md-center align-items-sm-baseline">
+                <div>
+                    <a routerLink="/mail-compagin" class="d-block pb-2 go-back">
+                        <mdb-icon fas icon="angle-left"></mdb-icon> Go Back
+                    </a>
+                    <h4 class="d-inline-block"><b>New eMail Campaign</b></h4>
+                </div>
+                <div class="d-flex align-items-md-center top-b align-items-sm-baseline">
+                    <small>
+            <a href="#" class="d-block mr-4"> save as draft</a>
+
+          </small>
+                    <a routerLink="#" class="rounded  btn btn-dange disabled">Send</a>
+                </div>
+            </div>
+            <hr />
+
+
+            <div class="category">
+                <div class="mb-4">
+
+                    <!-- ------------------------------- ./ Card ------------------------------- -->
+                    <mdb-card class=" z-depth-0 border rounded p-md-3 p-sm-0">
+                        <mdb-card-body>
+
+                            <mdb-icon far icon="check-circle" class="active"></mdb-icon>
+                            <div>
+                                <h3>
+                                    1. Content
+                                </h3>
+                                <p class="mb-0">Design the content for your email.</p>
+                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </small>
+                                <br>
+                                <img src="../../../assets/img/email-campagin/4.png" class="img-theme mt-4" alt="" srcset="">
+
+                            </div>
+                            <div class="buton text-center">
+                                <a routerLink="/select-template">
+                                    <button class="btn btn-outline-primary">Design Email</button></a>
+                                <small><a href="#">Delete Template</a></small>
+                            </div>
+
+                        </mdb-card-body>
+                    </mdb-card>
+                    <!-- ------------------------------- ./ Card ------------------------------- -->
+                </div>
+                <div class="mb-4">
+                    <!-- ------------------------------- ./ Card ------------------------------- -->
+                    <mdb-card class=" z-depth-0 border rounded p-3">
+                        <mdb-card-body>
+                            <mdb-icon far icon="check-circle"></mdb-icon>
+                            <div>
+                                <h3>
+                                    2. To (recipients)
+                                </h3>
+                                <p class="mb-0" style="font-size: 13px;">All <b>subscribed contacts</b> in the audience Checking. <b><a
+                      href="#" class=" " style="text-decoration: underline;">4
+                      recipients</a></b>
+                                </p>
+                                <small>If you'd like to segment your audience, you can </small>
+                            </div>
+                            <div class="buton text-center">
+                                <button class="btn btn-outline-primary float-right" (click)='addRecp()'>Add Recipients</button>
+                                <small *ngIf="showRec" (click)='deleteRecp()'>Delete
+                  Recipients</small>
+                            </div>
+                        </mdb-card-body>
+                        <div class="choose-reci mt-5" *ngIf="showRec">
+                            <div></div>
+                            <div>
+                                <b class="mb-3 d-block">Add users By tag</b>
+                                <div class="border p-md-3 p-sm-1 white rounded add-hash">
+                                    <div class="hashes ">
+                                        <p class="d-inline-block mr-2" *ngIf="showMainContent">
+                                            <input type="button" (click)="onKey($event)" value="#good" class="border-0 " readonly>
+                                            <mdb-icon fas icon='plus' class=" plus" (click)="ShowHideButton($event)"></mdb-icon>
+                                        </p>
+                                        <p class="d-inline-block mr-2" *ngIf="showMainContent">
+                                            <input type="button" (click)="onKey($event)" value="#Designer" class="border-0 " readonly>
+                                            <mdb-icon fas icon='plus' class=" plus" (click)="ShowHideButton($event)"></mdb-icon>
+                                        </p>
+                                        <p class="d-inline-block mr-2" *ngIf="showMainContent">
+                                            <input type="button" (click)="onKey($event)" value="#Developer" class="border-0 " readonly>
+                                            <mdb-icon fas icon='plus' class=" plus" (click)="ShowHideButton($event)"></mdb-icon>
+                                        </p>
+                                        <p class="d-inline-block mr-2">
+                                            <input type="button" (click)="onKey($event)" value="#Italy" class="border-0 " readonly>
+                                            <mdb-icon fas icon='plus' class=" plus"></mdb-icon>
+                                        </p>
+                                        <p class="d-inline-block mr-2">
+                                            <input type="button" (click)="onKey($event)" value="#India" class="border-0 " readonly>
+                                            <mdb-icon fas icon='plus' class=" plus"></mdb-icon>
+                                        </p>
+                                    </div>
+                                    <textarea #box (keyup.enter)='onEnter(box.value)' rows="10" class="w-100 border-0 p-2"></textarea>
+
+                                </div>
+                                <div class="d-flex align-items-md-center align-items-sm-baseline mt-4">
+                                    <div class="btn btn-primary mr-3">save</div>
+                                    <div class="btn btn-outline-primary mr-3">Add Group</div>
+                                    <b> <a href="#">Cancel</a> </b>
+                                </div>
+                                <small class="mt-2">All <b>total recipients 550</b> in the audience email avaiables. <a href="#"
+                    style="text-decoration: underline;">1000</a>
+                </small>
+
+                            </div>
+                            <div class="hashes">
+                                <b class="mb-3 d-block">Based on your usage you may like below tags</b>
+                                <p class="d-inline-block mr-2">
+                                    <input type="button" (click)="onKey($event)" value="#good" class="border-0 " readonly>
+                                    <mdb-icon fas icon='plus' class=" plus"></mdb-icon>
+                                </p>
+                                <p class="d-inline-block mr-2">
+                                    <input type="button" (click)="onKey($event)" value="#Designer" class="border-0 " readonly>
+                                    <mdb-icon fas icon='plus' class=" plus"></mdb-icon>
+                                </p>
+                                <p class="d-inline-block mr-2">
+                                    <input type="button" (click)="onKey($event)" value="#Developer" class="border-0 " readonly>
+                                    <mdb-icon fas icon='plus' class=" plus"></mdb-icon>
+                                </p>
+                                <p class="d-inline-block mr-2">
+                                    <input type="button" (click)="onKey($event)" value="#Italy" class="border-0 " readonly>
+                                    <mdb-icon fas icon='plus' class=" plus"></mdb-icon>
+                                </p>
+                                <p class="d-inline-block mr-2">
+                                    <input type="button" (click)="onKey($event)" value="#India" class="border-0 " readonly>
+                                    <mdb-icon fas icon='plus' class=" plus"></mdb-icon>
+                                </p>
+                                <br>
+                                <b>Based on your usage you may like below tags</b>
+                                <br>
+                                <p>{{values}}</p>
+                            </div>
+
+                        </div>
+                    </mdb-card>
+                </div>
+                <!-- ------------------------------- ./ Card ------------------------------- -->
+                <div class="mb-4">
+                    <!-- ------------------------------- ./ Card ------------------------------- -->
+                    <mdb-card class=" z-depth-0 border rounded p-3">
+                        <mdb-card-body>
+                            <mdb-icon far icon="check-circle"></mdb-icon>
+                            <div>
+                                <h3>
+                                    3. Form
+                                </h3>
+
+                                <small>All Kishan • <b>kishan.vishwa@gmail.com</b> </small>
+                            </div>
+                            <div class="buton text-center">
+                                <button class="btn btn-outline-primary float-right">Edit Form</button>
+                            </div>
+
+                        </mdb-card-body>
+                    </mdb-card>
+
+                </div>
+                <!-- ------------------------------- ./ Card ------------------------------- -->
+                <div class="mb-4">
+                    <!-- ------------------------------- ./ Card ------------------------------- -->
+                    <mdb-card class=" z-depth-0 border rounded p-3">
+                        <mdb-card-body>
+                            <mdb-icon far icon="check-circle"></mdb-icon>
+                            <div>
+                                <h3>
+                                    4. Subject
+                                </h3>
+                                <small>What's the subject line for this campaign? </small>
+
+                                <div class="tog mt-4" mdbCollapse #test="bs-collapse">
+                                    <form>
+                                        <!-- Grd row -->
+                                        <div class="form-row">
+                                            <!-- Grid column -->
+                                            <div class="col">
+                                                <!-- Default input -->
+                                                <small>Subject</small> <small class="float-right text-black-50">150 Characters </small>
+                                                <input mdbInput type="text" class="form-control" placeholder="subject goes here">
+                                                <small>See how your recent subject lines performed.</small>
+                                                <div class="d-flex align-items-md-center align-items-sm-baseline mt-4">
+                                                    <div class="btn btn-primary mr-3">save</div>
+                                                    <a href="#">Cancel</a>
+                                                </div>
+                                                <small class="d-block">
+                          When it comes to email marketing, the best subject lines tell
+                        </small>
+                                                <small>
+                          what's inside instead of sell what's inside.
+                          <a href="#">View our subject line guide</a>
+
+                        </small>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="buton text-center">
+                                <button class="btn btn-outline-primary float-right waves-light" mdbBtn type="button" (click)="test.toggle()" mdbWavesEffect>Add Subject</button>
+
+                            </div>
+
+                        </mdb-card-body>
+                    </mdb-card>
+                    <!-- ------------------------------- ./ Card ------------------------------- -->
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

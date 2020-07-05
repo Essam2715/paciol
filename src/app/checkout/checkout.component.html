@@ -1,0 +1,210 @@
+<nav></nav>
+<!--
+    _________________________________________
+    _________________________________________
+    ______________________ -->
+<div class="container">
+    <div class="row pr-md-3 pr-sm-0 pl-md-3 pl-sm-0 mt-5">
+        <div class="rounded col-md-3 mt-md-4 mt-sm-0">
+            <side-nav></side-nav>
+        </div>
+
+        <section class="mt-4 col-md-9 col-sm-12 pr-md-3 pr-sm-1 rounded">
+            <a href="#" class="go-back">
+                <mdb-icon fas icon="chevron-left"></mdb-icon> All Customer
+            </a>
+            <h4>Checkout</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-8  p-3 white rounded col-sm-12">
+                    <h5 class=" font-weight-bolder ">products</h5>
+                    <hr>
+                    <table mdbTable responsive="true">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                                <th scope="col" class="text-center">remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr mdbTableCol *ngFor="let el of elements">
+                                <th scope="row">
+                                    <div class="media">
+                                        <img class="d-flex align-self-start mr-3" src="../../assets/img/checkout/{{el.img}}" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 ">{{el.name}}</h6>
+                                            <small>{{el.explain}}</small>
+                                        </div>
+                                    </div>
+
+                                </th>
+                                <td>{{el.price}}</td>
+                                <td>{{el.type}}</td>
+                                <td>{{el.quantity}}</td>
+                                <td class="text-danger text-center">
+                                    <mdb-icon far icon="trash-alt"></mdb-icon>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="check-address mt-4">
+                        <h5 class=" font-weight-bolder ">
+                            Checkout Address
+                        </h5>
+                        <hr>
+                        <!--  form row -->
+                        <form>
+                            <!-- Grd row -->
+                            <div class="form-row">
+                                <!-- Grid column -->
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute "> Address Line 1 </label>
+                                    <input mdbInput type="text" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute "> Address Line 1 </label>
+                                    <input mdbInput type="text" class="form-control" placeholder="Italy">
+                                </div>
+                                <!-- Grid column -->
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">City</label>
+                                    <select class="browser-default custom-select">
+                    <option selected>Bangalore</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">Porvince</label>
+                                    <select class="browser-default custom-select">
+                    <option selected>Bangalore</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                                </div>
+                                <!-- Grid column -->
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">State</label>
+                                    <select class="browser-default custom-select">
+                    <option selected>Karnataka</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">Zip Code</label>
+                                    <input mdbInput type="text" class="form-control" placeholder="231098">
+                                </div>
+                                <!-- Grid column -->
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">Spec</label>
+                                    <input mdbInput type="text" class="form-control" placeholder="placeholder ">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">Email ID</label>
+                                    <input mdbInput type="email" class="form-control" placeholder="Name@email.com">
+                                </div>
+                                <!-- Grid column -->
+                                <div class="col-4 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">Label Vat</label>
+                                    <input mdbInput type="text" class="form-control" placeholder="$1229.00">
+                                </div>
+                                <!-- Grid column -->
+                                <div class="col-4 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">Fiscal_Code</label>
+                                    <input mdbInput type="text" class="form-control" placeholder="$1229.00">
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <!--  input -->
+                                    <label for="" class=" position-absolute ">SDI_Code</label>
+                                    <input mdbInput type="text" class="form-control" placeholder="$1229.00">
+                                </div>
+                                <!-- Grid column -->
+                            </div>
+                            <!-- Grd row -->
+                        </form>
+                        <!--  form row -->
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12   ">
+                    <div class="white rounded p-md-3 p-sm-1">
+                        <h5 class=" font-weight-bolder ">Summary</h5>
+                        <hr>
+                        <div class="position-relative">
+                            <label for="" class=" position-absolute ">Coupon Code</label>
+                            <input mdbInput type="text" class="form-control d-inline-block mr-1 w-75" placeholder="GIFT820" style="font-size: 13px;">
+                            <button class="btn btn-outline-primary float-right apply">Apply</button>
+                        </div>
+                        <div class="amount mt-3 font-weight-normal">
+                            <div class="d-flex justify-content-between">
+                                <p>Total Amount</p>
+                                <b>$192.00</b>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p>Discount Amount</p>
+                                <b>$192.00</b>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom">
+                                <p>Copon Discount</p>
+                                <b>$5.00</b>
+                            </div>
+
+                            <div class="d-flex justify-content-between pt-2">
+                                <p>Total Amount</p>
+                                <b>$105</b>
+                            </div>
+                        </div>
+
+                        <div class="payment-method mt-3">
+                            <p><b>Payment Method</b> </p>
+                            <hr>
+                            <!-- Default unchecked -->
+                            <div class="custom-control custom-radio p-0 mb-4">
+                                <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
+                                <label class="custom-control-label media border p-2" for="defaultUnchecked">
+        <mdb-icon fas icon="university" size="3x"></mdb-icon>
+            <div class=" media-body ml-2">
+                <h5 class="mt-0 font-weight-bold ">Bank</h5>
+                <small class="mt-0"> Repellat quae expedita iste aspernatur.</small>
+            </div>
+    </label>
+                            </div>
+
+                            <!-- Default checked -->
+                            <div class="custom-control custom-radio p-0 mb-2">
+                                <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked mdbInput>
+                                <label class="custom-control-label media border p-2" for="defaultChecked">
+        <mdb-icon fab icon="paypal " size="3x"></mdb-icon>
+            <div class="media-body ml-2">
+
+                <h5 class="mt-0 font-weight-bold ">Paypal</h5>
+                <small class="mt-0 ">t. Odit a, modi eos commodi officia enim?</small>
+            </div>
+    </label>
+                            </div>
+
+
+                            <div class="btn btn-lg btn-primary mt-1 w-100 mb-3">Place Order & Pay</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- --------------------------- Table in Footer --------------------------- -->
+        </section>
+    </div>
+</div>

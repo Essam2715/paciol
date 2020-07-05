@@ -1,0 +1,118 @@
+<nav></nav>
+<!--
+    _________________________________________
+    _________________________________________
+    ______________________ -->
+<div class="container">
+    <div class="row pr-3 pl-3 mt-5">
+        <div class="rounded col-md-3 mt-4">
+            <side-nav></side-nav>
+        </div>
+        <div class="col-md-9 mt-4 landing-campaign white ">
+
+            <!-- ------------------------------ Top Part ------------------------------- -->
+            <div class="d-flex justify-content-between align-items-md-center align-items-sm-baseline py-2">
+                <div>
+                    <a routerLink="/create-campagin" class="d-block pb-2 go-back">
+                        <mdb-icon fas icon="angle-left"></mdb-icon> Go Back
+                    </a>
+                    <h4 class="d-inline-block">Select Template </h4>
+                </div>
+                <form class="form-inline md-form m-0 form-sm active-pink-2 ">
+                    <input class="form-control m-0 form-control-sm w-100 border rounded" type="text" placeholder="Search email campaign" aria-label="Search" mdbInput />
+                    <mdb-icon fas icon="search" class="position-absolute" style="right: 20px;top: 10px;
+                    " aria-hidden="true"></mdb-icon>
+                </form>
+            </div>
+            <hr />
+            <!-- ------------------------------ Top Part ------------------------------- -->
+            <div class="trending mb-4">
+                <small class="d-inline">Trending:</small>
+                <button class="btn rounded">#summer</button>
+                <button class="btn rounded">#promotions</button>
+                <button class="btn rounded">#goodyear</button>
+                <button class="btn rounded">#holiday</button>
+                <button class="btn rounded">#blackfriday</button>
+                <button class="btn rounded">#HappyHours</button>
+                <button class="btn rounded">#italian</button>
+                <a href="#"><small>View More</small></a>
+            </div>
+
+            <!-- ----------------------------- ./Trending ------------------------------ -->
+
+            <!-- ----------------------------- ./Templates ----------------------------- -->
+            <div class="row">
+
+                <!-- -------------------------------- ./row -------------------------------- -->
+
+                <div class="col-md-3 mb-3" *ngFor='let temp of Templates '>
+                    <!-- Card -->
+                    <mdb-card class=" border z-depth-0 ">
+                        <div class="view rgba-white-slight  waves-light" style="height: 200px;" mdbWavesEffect>
+                            <!-- Card img -->
+                            <img src="../../../assets/img/email-campagin/{{temp.TemplateImg}}" alt="Card image cap" class="template w-100 " />
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--Card content-->
+                        <mdb-card-body class="white">
+                            <!--Title-->
+                            <mdb-card-title>
+                                <h4 class="text-center"> <a routerLink="/show-product" class="text-dark">{{temp.TemplateTitle}}</a></h4>
+                            </mdb-card-title>
+                            <div class="rate text-center text-warning">
+                                <mdb-icon fas icon="star"></mdb-icon>
+                                <mdb-icon fas icon="star"></mdb-icon>
+                                <mdb-icon fas icon="star"></mdb-icon>
+                                <mdb-icon fas icon="star"></mdb-icon>
+                                <mdb-icon fas icon="star"></mdb-icon>
+                            </div>
+                            <!--Text-->
+                            <mdb-card-text>
+                                {{temp.Tags}}
+                            </mdb-card-text>
+
+
+                        </mdb-card-body>
+                    </mdb-card>
+                    <!-- Card -->
+
+                </div>
+
+
+                <!-- ----------------------------- Pagenation ------------------------------ -->
+                <div class="mt-3 mb-4 mx-auto border">
+                    <ul class="pagination pg-darkgrey mb-0">
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Previous" mdbWavesEffect>
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" mdbWavesEffect>1</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>2</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>3</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>4</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>5</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>...</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>21</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>22</a></li>
+                        <li class="page-item"><a class="page-link" mdbWavesEffect>23</a></li>
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Next" mdbWavesEffect>
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ----------------------------- Pagenation ------------------------------ -->
+
+                <!-- -------------------------------- ./Row -------------------------------- -->
+            </div>
+            <!-- ----------------------------- ./Templates ----------------------------- -->
+
+        </div>
+    </div>
+</div>

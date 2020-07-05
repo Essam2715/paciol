@@ -1,0 +1,35 @@
+<div class="table white rounded mt-4 p-2">
+    <div class="container">
+        <h4>How are we doing?</h4>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <h4 class="d-inline-block">invoices Details</h4>
+                <h5 class="float-right pr-3 text-black-50">monthly</h5>
+                <h5 class="float-right pr-3 text-black-50">weekly</h5>
+                <h5 class="float-right text-black pr-3">Today</h5>
+
+                <table mdbTable bordered="true" responsive="true" hover="true">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr mdbTableCol *ngFor="let el of elements">
+
+                            <td>{{el.heading1}}</td>
+                            <td>{{el.heading2}}</td>
+                            <td>{{el.heading3}}</td>
+                            <td>{{el.heading4}}</td>
+                            <td>{{el.heading5}}</td>
+                            <td>{{el.heading6}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

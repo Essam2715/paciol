@@ -1,0 +1,208 @@
+<nav></nav>
+<!--
+    _________________________________________
+    _________________________________________
+    ______________________ -->
+<div class="container">
+    <div class="row pr-md-3 pr-sm-0  pl-md-3 pl-sm-0 mt-5">
+        <div class=" rounded col-md-3 mt-md-4 mt-sm-0 ">
+
+            <side-nav></side-nav>
+        </div>
+
+        <section class=" mt-4 customers col-md-9 col-sm-12 pr-md-3 pr-sm-1">
+            <div class="customer-charts p-3 p-sm-2 white rounded">
+                <div class="pl-4">
+                    <a href="#">
+                        <mdb-icon fas icon="chevron-left"></mdb-icon> All Customer
+                    </a>
+                    <h4>Customer Name</h4>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 w-100 col-sm-12 task-res ">
+                            <div class="media align-items-center  rounded  border">
+                                <div class="wid-style firstIcon ml-3">
+                                    <mdb-icon fas icon="business-time" class="rounded-circle "></mdb-icon>
+
+                                </div>
+                                <div class="media-body font-weight-bold text-justify pl-3">
+                                    3,200
+                                    <h5 class="mt-0 pl-0">Total Posts</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 w-100 col-sm-12 task-res ">
+                            <div class="media align-items-center  rounded border">
+                                <div class="wid-style sectIcon ml-3">
+                                    <mdb-icon fas icon="file-invoice-dollar" class="  rounded-circle "></mdb-icon>
+                                </div>
+                                <div class="media-body font-weight-bold text-left pl-3">
+                                    710
+                                    <h5 class="mt-0 pl-0">Invoice done</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 w-100 col-sm-12 task-res ">
+                            <div class="media align-items-center  rounded border">
+                                <div class="wid-style thIcon ml-3">
+                                    <mdb-icon fas icon="hand-holding-usd" class="  rounded-circle "></mdb-icon>
+
+                                </div>
+                                <div class="media-body  pl-3">
+                                    390K €
+                                    <h5 class="mt-0 pl-0">Payments done</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 w-100 col-sm-12 task-res pr-0">
+                            <div class="media align-items-center rounded border">
+                                <div class="wid-style foIcon ml-3">
+                                    <mdb-icon fas icon="users" class="  rounded-circle "></mdb-icon>
+
+                                </div>
+                                <div class="media-body  pl-3">
+                                    80
+                                    <h5 class="mt-0 pl-0">Active user/day</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------------- Charts -------------------------------- -->
+                        <!-- ------------------------------- Charts -------------------------------- -->
+                        <div class="col-md-9 col-sm-12  rounded pl-0 mt-3">
+                            <div class=" doughnut border  w-100">
+                                <h5 class="pt-2 pl-4">Total Tasks created Vs Completed</h5>
+                                <hr>
+                                <!-- <line-chart></line-chart> -->
+                                <doughnut-bar-chart></doughnut-bar-chart>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 d-flex justify-content-center align-items-center  doughnut-bar mt-3 rounded">
+                            <div class=" doughnut border h-100 w-100 ">
+                                <h5 class="pt-2">Overall Status</h5>
+                                <hr>
+                                <app-circle-chart></app-circle-chart>
+                                <div class="text-center my-2 pt-5 status-color">
+                                    <span class="pr-1">
+                    <mdb-icon fas icon="circle"></mdb-icon> Created
+                  </span>
+                                    <span class="pl-1">
+                    <mdb-icon fas icon="circle"></mdb-icon>Completed
+                  </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ------------------------------- Charts -------------------------------- -->
+                        <!-- ------------------------------- Charts -------------------------------- -->
+
+                    </div>
+                </div>
+            </div>
+
+            <app-timeline></app-timeline>
+
+            <!-- ------------------------ Posts Related to you ------------------------- -->
+
+            <div class="posts-related  py-3 border">
+                <div class="container">
+                    <h6 class=" font-weight-bold">Posts related to you
+                        <mdb-icon fas icon="file-alt"></mdb-icon>
+
+                    </h6>
+                    <hr>
+
+                    <div class="row ">
+
+                        <!-- --------------------------------- ./ ---------------------------------- -->
+                        <div class="col-md-6 col-sm-12 mt-4 p-sm-0">
+
+                            <div class="media recent-activities d-flex align-items-center expires-post mb-2 white rounded">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="40px" class="img-fluid rounded-circle z-depth-0">
+                                <div class="media-body text-muted pl-md-3 pl-sm-0">
+                                    <h5 class=" mb-0 pl-0">Jhonson Smith</h5>
+                                    <small>Has add new Task</small>
+                                </div>
+                                <div class="media-body text-muted text-right pr-5 ">
+                                    <small>Expired in</small>
+                                    <h4 class=" mb-0  ">2 Days</h4>
+                                    <img src="../../assets/img/custmer/created.png" class='right-icon' alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="media recent-activities d-flex align-items-center expired-post mb-2 white rounded">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="40px" class="img-fluid rounded-circle z-depth-0">
+                                <div class="media-body text-muted pl-md-3 pl-sm-0">
+                                    <h5 class=" mb-0 pl-0 ">Jhonson Smith</h5>
+                                    <small>Has add new Task</small>
+                                </div>
+                                <div class="media-body text-muted  text-right pr-5 ">
+                                    <small>Statues</small>
+                                    <h4 class=" mb-0  ">Completed</h4>
+                                    <img src="../../assets/img/custmer/expired.png" class='right-icon' alt="" srcset="">
+                                </div>
+                            </div>
+
+                            <div class="media recent-activities d-flex align-items-center complete-post mb-2 white rounded">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="40px" class="img-fluid rounded-circle z-depth-0">
+                                <div class="media-body text-muted pl-md-3 pl-sm-0">
+                                    <h5 class=" mb-0 pl-0 ">Jhonson Smith</h5>
+                                    <small>Has add new Task</small>
+                                </div>
+                                <div class="media-body text-muted  text-right pr-5 ">
+                                    <small>Statues</small>
+                                    <h4 class=" mb-0  ">Expired</h4>
+                                    <img src="../../assets/img/custmer/completed.png" class='right-icon' alt="" srcset="">
+                                </div>
+                            </div>
+
+
+                            <div class="media recent-activities d-flex align-items-center create-post mb-2 white rounded">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="40px" class="img-fluid rounded-circle z-depth-0">
+                                <div class="media-body text-muted pl-md-3 pl-sm-0">
+                                    <h5 class=" mb-0 pl-0">Jhonson Smith</h5>
+                                    <small>Has add new Task</small>
+                                </div>
+                                <div class="media-body text-muted text-right pr-5 ">
+                                    <small>Statues</small>
+                                    <h4 class=" mb-0  "> Not Read</h4>
+                                    <img src="../../assets/img/custmer/nor-read.png" class='right-icon pr-1 pt-1' alt="" srcset="">
+                                </div>
+                            </div>
+
+                            <div class="media recent-activities d-flex align-items-center complete-post mb-2 white rounded">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" width="40px" class="img-fluid rounded-circle z-depth-0">
+                                <div class="media-body text-muted pl-md-3 pl-sm-0">
+                                    <h5 class=" mb-0 pl-0 ">Jhonson Smith</h5>
+                                    <small>Has add new Task</small>
+                                </div>
+                                <div class="media-body text-muted text-right pr-5 ">
+                                    <small>Statues</small>
+                                    <h4 class=" mb-0  ">Completed</h4>
+                                    <img src="../../assets/img/custmer/completed.png" class='right-icon' alt="" srcset="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- --------------------------------- ./ ---------------------------------- -->
+
+                        <div class="col-md-6 col-sm-12 mt-4 ">
+                            <app-task-post-not-done></app-task-post-not-done>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- --------------------------- Table in Footer --------------------------- -->
+
+            <table-responsive></table-responsive>
+
+
+        </section>
+    </div>
+</div>
